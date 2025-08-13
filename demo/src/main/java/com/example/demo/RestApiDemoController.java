@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -14,6 +15,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/")
 public class RestApiDemoController {
+    @Autowired
     private final CoffeeRepository cofeeRepository;
     public RestApiDemoController(CoffeeRepository cofeeRepository){
         this.cofeeRepository = cofeeRepository;

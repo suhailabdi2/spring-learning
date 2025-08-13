@@ -18,6 +18,8 @@ public class Cofee  {
         this.name = name;
         System.out.println("Cofee generation works");
     }
+    Cofee(){
+    }
     @JsonCreator
     public Cofee(@JsonProperty("id")String id,@JsonProperty("name")String name ){
         this.id = id;
